@@ -43,7 +43,7 @@ try:
     # Show the results
     print(result_sim.get_counts(qc))
 
-    # see a list of available remote backends
+    # See a list of available remote backends
     ibmq_backends = IBMQ.backends()
 
     print("Remote backends: ", ibmq_backends)
@@ -55,7 +55,7 @@ try:
 
     print("Running on current least busy device: ", least_busy_device)
 
-    #running the job
+    # Running the job
     job_exp = execute(qc, least_busy_device, shots=1024, max_credits=10)
     result_exp = job_exp.result()
 
